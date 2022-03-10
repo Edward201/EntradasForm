@@ -56,4 +56,13 @@
         </div>
     </div>
 </body>
+
+<script>
+    const { ipcRenderer } = require('electron');
+    
+    // Info a validar
+    ipcRenderer.on('user:validate', (e, userValidate) => {
+        console.log(userValidate)
+    });
+</script>
 </html>

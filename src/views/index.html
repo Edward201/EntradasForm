@@ -8,38 +8,53 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <script>
-        const { ipcRenderer } = require('electron');
-    </script>
 </head>
 <body>
     <div class="card o-hidden border-0 shadow-lg my-5">
         <div class="card-body p-0">
             <div class="p-5">
-                <form role="form" action="" method="post" accept-charset="utf-8">
+                <form class="p-4">
                     <div class="row">
                         <div class="form-group col-sm-12 col-md-6">
-                            <label for="document">Número de documento:</label>
-                            <input required type="number" class="form-control" name="document" id="document">
+                            <label for="documentNumber">Número de documento:</label>
+                            <input required type="number" class="form-control" name="documentNumber" id="documentNumber">
                         </div>
                         <div class="form-group col-sm-12 col-md-6">
                             <label for="name">Nombres y apellidos completos:</label>
                             <input required type="text" class="form-control" id="name" name="name" placeholder="Nombre:">
                         </div>
                         <div class="col-12 text-center mt-5">
-                            <button onclick="replaceSpaces()" type="submit" class="btn btn-warning">Validar</button>
+                            <button type="submit" class="btn btn-warning">Validar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <div id="names">
+        
+    </div>
     
 </body>
+<script src="../../renderer.js"></script>
 <script>
-    function replaceSpaces(){
-        var name = document.getElementById("name").value;
+    const { ipcRenderer } = require('electron');
+
+    const form = document.querySelector('form');
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const name = document.querySelector('#name').value;
         document.getElementById("name").value = name.replace(/\s+/g, " ");
-    }
+
+        const documentNumber = document.querySelector('#documentNumber').value;
+
+        const userValidate = {
+            name: document,
+            document: documentNumber
+        };
+
+        ipcRenderer.send('user:validate', userValidate);
+    });
 </script>
 </html>
