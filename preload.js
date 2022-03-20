@@ -1,10 +1,26 @@
 const userMgr = require("./models/user_mgr");
-const {contextBridge} = require("electron");
+const {contextBridge, ipcRenderer} = require("electron");
 
-const getNames = () => {
-    return userMgr.getNames();
+const validateUser = (userValidate) => {
+    return userMgr.validateUser(userValidate);
 }
 
+const registerUser = (data) => {
+    ipcRenderer.send('registerNewUser', data);
+}
+
+const createUser = (userData) => {
+    return userMgr.createNewUser(userData);
+}
+
+ipcRenderer.on('registerUser', (e, data) => {
+    console.log(data)
+    document.getElementById('name').value = data.name;
+    document.getElementById('document').value = data.document;
+});
+
 contextBridge.exposeInMainWorld("api", {
-    getNames: getNames
+    validateUser: validateUser,
+    registerUser: registerUser,
+    createUser: createUser
 });

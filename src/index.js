@@ -14,9 +14,12 @@ let validateWindow;
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
+        width:960,
+        height:540,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: true,
+            enableRemoteModule: false,
             preload: path.join(__dirname, '../preload.js')
         }
     });
@@ -35,14 +38,16 @@ app.on('ready', () => {
 
 });
 
-function validateDocumentWindow() {
+function validateDocumentWindow(){
     validateWindow = new BrowserWindow({
-        width:400,
-        height:330,
+        width:860,
+        height:720,
         title:'SMARTFILMS - Validación Cédulas',
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false,
+            contextIsolation: true,
+            enableRemoteModule: false,
+            preload: path.join(__dirname, '../preload.js')
         }
     })
     validateWindow.loadURL(url.format({
@@ -55,15 +60,6 @@ function validateDocumentWindow() {
 const templateMenu = [
     {
         label: app.getName(),
-        submenu:[
-            {
-                label:'validate',
-                accelerator:'Ctrl+N',
-                click() {
-                    validateDocumentWindow();
-                }
-            }
-        ]
     },
     {
         label:'Salir',
@@ -73,14 +69,12 @@ const templateMenu = [
     }
 ];
 
-
-// Enviar datos a validar
-ipcMain.on('user:validate', (e, userValidate) => {
-    // Enviar a la ventana de validación
-    // console.log(userValidate);
-    validateWindow.webContents.send('user:validate', userValidate);
+// Ipc Renderer Events
+ipcMain.on('registerNewUser', (e, userValidate) => {
+    // send to the Main Window
     validateDocumentWindow();
-  });
+    validateWindow.webContents.send('registerUser', userValidate);
+});
 
 // Developer Tools in Development Environment
 if (process.env.NODE_ENV !== 'production') {

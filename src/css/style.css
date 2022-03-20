@@ -1,0 +1,28 @@
+@font-face {
+    font-family: CodeNext;
+    src: url('../assets/fonts/Fontfabric\ -\ Code\ Next\ ExtraBold.otf');
+}
+
+@font-face {
+    font-family: WhiteOnBlack;
+    src: url('../assets/fonts/White\ On\ Black.ttf');
+}
+body{
+    background-image: url(../assets/img/FondoB.jpg) !important;
+    font-family: CodeNext;
+    color: black;
+}
+.card-container{
+    background-image: url(../assets/img/FondoA.jpg);
+}
+.title{
+    font-family: WhiteOnBlack !important;
+    font-size: 220%;
+    text-align: center;
+    padding-top: 5px;
+}
+.button{
+    color: #212529;
+    background-color: #ffd002;
+    border-color: #ffd002;
+}
