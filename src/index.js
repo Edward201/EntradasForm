@@ -17,9 +17,10 @@ app.on('ready', () => {
         width:960,
         height:540,
         webPreferences: {
+            frame: false,
             nodeIntegration: true,
             contextIsolation: true,
-            enableRemoteModule: false,
+            enableRemoteModule: true,
             preload: path.join(__dirname, '../preload.js')
         }
     });
@@ -46,7 +47,7 @@ function validateDocumentWindow(){
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: true,
-            enableRemoteModule: false,
+            enableRemoteModule: true,
             preload: path.join(__dirname, '../preload.js')
         }
     })
