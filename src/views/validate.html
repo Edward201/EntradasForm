@@ -16,34 +16,47 @@
             <div class="p-5">
                 <form action="" id="formUsers" method="post" accept-charset="utf-8">
                     <div class="row">
-                        <div class="form-group col-sm-12 col-md-6">
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="document">Número de documento:</label>
                             <input required type="number" class="form-control" name="document" id="document">
                         </div>
-                        <div class="form-group col-sm-12 col-md-6">
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="name">Nombres y apellidos completos:</label>
                             <input required type="text" class="form-control" id="name" name="name" placeholder="Nombre:">
                         </div>
-                        <div class="form-group col-sm-12 col-md-6">
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="typeDocument">Tipo de documento:</label>
                             <select required class="form-control" id="typeDocument" name="typeDocument">
-                            <option>Cédula de ciudadanía.</option>
-                            <option>Número de pasaporte.</option>
+                            <option>CÉDULA DE CIUDADANIA</option>
+                            <option>TARJETA DE IDENTIDAD</option>
                             </select>
                         </div>
-                        <div class="form-group col-sm-12 col-md-6">
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="country">País de residencia:</label>
                             <select class="form-control" id="country" name="country">
                             <option selected>Colombia.</option>
                             </select>
                         </div>
-                        <div class="form-group col-sm-12 col-md-6">
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="email">Correo eletrónico:</label>
                             <input required type="email" class="form-control" id="email" name="email"  placeholder="correo@ejemplo.com">
                         </div>
-                        <div class="form-group col-sm-12 col-md-6">
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="phone">Número de Celular:</label>
                             <input required type="number" class="form-control" name="phone"  id="phone">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="disability">¿TIENE ALGÚN TIPO DE DISCAPACIDAD?:</label>
+                            <select required class="form-control" id="disability" name="disability">
+                                <option>AUDITIVA.</option>
+                                <option>COGNITIVA.</option>
+                                <option>FÍSICA.</option>
+                                <option>MÚLTIPLE.</option>
+                                <option>PSICOSOCIAL.</option>
+                                <option>SORDO-CEGUERA.</option>
+                                <option>VISUAL.</option>
+                                <option selected>NO PRESENTA DISCAPACIDAD.</option>
+                            </select>
                         </div>
                         <p>
                             *Solo se permite el ingreso de mayores de edad<br>

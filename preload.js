@@ -10,11 +10,15 @@ const registerUser = (data) => {
 }
 
 const createUser = (userData) => {
-    return userMgr.createNewUser(userData);
+    userMgr.createNewUser(userData)
+    if (!userData.id) {
+        ipcRenderer.send('closeRegister');
+        return alert('El usuario se ha guardado exitosamente');
+    }
+    return '';
 }
 
 ipcRenderer.on('registerUser', (e, data) => {
-    console.log(data)
     document.getElementById('name').value = data.name;
     document.getElementById('document').value = data.document;
 });

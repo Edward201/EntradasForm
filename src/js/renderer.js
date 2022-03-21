@@ -14,9 +14,13 @@ form.addEventListener('submit', e => {
 
     let res = window.api.validateUser(userValidate);
     if (res.length > 0) {
-        window.api.createUser(res[0]);
+        console.log(res[0])
+        if(res[0].table == "users_upload"){
+            window.api.createUser(res[0]);
+        }
         alert('El usuario ya se encuentra registrado');
     }else{
         window.api.registerUser(userValidate);
     }
+
 });

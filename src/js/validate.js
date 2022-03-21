@@ -11,6 +11,7 @@ form.addEventListener('submit', e => {
     var country = document.getElementById('country').value;
     var email = document.getElementById('email').value;
     var phone = document.getElementById('phone').value;
+    var disability = document.getElementById('disability').value;
 
     var userData = {
         name: name,
@@ -18,7 +19,8 @@ form.addEventListener('submit', e => {
         typeDocument: typeDocument,
         country: country,
         email: email,
-        phone: phone
+        phone: phone,
+        disability: disability
     };
 
     window.api.createUser(userData);
