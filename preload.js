@@ -9,6 +9,10 @@ const registerUser = (data) => {
     ipcRenderer.send('registerNewUser', data);
 }
 
+const getUsers = () => {
+    return userMgr.getUsers();
+}
+
 const createUser = (userData) => {
     userMgr.createNewUser(userData)
     if (!userData.id) {
@@ -26,5 +30,6 @@ ipcRenderer.on('registerUser', (e, data) => {
 contextBridge.exposeInMainWorld("api", {
     validateUser: validateUser,
     registerUser: registerUser,
-    createUser: createUser
+    createUser: createUser,
+    getUsers: getUsers
 });

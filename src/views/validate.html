@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="document">Número de documento:</label>
-                            <input required type="number" class="form-control" name="document" id="document">
+                            <input required type="text" class="form-control" name="document" id="document">
                         </div>
                         <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="name">Nombres y apellidos completos:</label>
@@ -27,8 +27,13 @@
                         <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="typeDocument">Tipo de documento:</label>
                             <select required class="form-control" id="typeDocument" name="typeDocument">
-                            <option>CÉDULA DE CIUDADANIA</option>
-                            <option>TARJETA DE IDENTIDAD</option>
+                            <option selected>Cédula de ciudadanía</option>
+                            <option>Cédula de extranjería</option>
+                            <option>Tarjeta de identidad</option>
+                            <option>NUIP: Número único de identificación personal</option>
+                            <option>Pasaporte</option>
+                            <option>Tarjeta de extranjería</option>
+                            <option>RC: Registro civil de nacimiento</option>
                             </select>
                         </div>
                         <div class="form-group col-sm-12 col-md-6 pt-3">
@@ -39,15 +44,15 @@
                         </div>
                         <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="email">Correo eletrónico:</label>
-                            <input required type="email" class="form-control" id="email" name="email"  placeholder="correo@ejemplo.com">
+                            <input type="email" class="form-control" id="email" name="email"  placeholder="correo@ejemplo.com">
                         </div>
                         <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="phone">Número de Celular:</label>
-                            <input required type="number" class="form-control" name="phone"  id="phone">
+                            <input type="number" class="form-control" name="phone"  id="phone">
                         </div>
                         <div class="form-group col-sm-12 col-md-6 pt-3">
                             <label for="disability">¿TIENE ALGÚN TIPO DE DISCAPACIDAD?:</label>
-                            <select required class="form-control" id="disability" name="disability">
+                            <select class="form-control" id="disability" name="disability">
                                 <option>AUDITIVA.</option>
                                 <option>COGNITIVA.</option>
                                 <option>FÍSICA.</option>
@@ -58,10 +63,110 @@
                                 <option selected>NO PRESENTA DISCAPACIDAD.</option>
                             </select>
                         </div>
+                    </div>
+                    <div id="minticFields" class="row py-3" style="visibility: hidden; height: 0px;">
+                        <div class="col-12 pt-3">
+                            <h2 class="title">Campos adicionales MINTIC</h2>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="edad">Edad:</label>
+                            <input type="number" class="form-control" name="edad"  id="edad">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="departamento">Departamento:</label>
+                            <input type="text" class="form-control" name="departamento"  id="departamento">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="municipio">Municipio:</label>
+                            <input type="text" class="form-control" name="municipio"  id="municipio">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="telefono_fijo">Teléfono Fijo:</label>
+                            <input type="number" class="form-control" name="telefono_fijo"  id="telefono_fijo">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="sexo">Sexo:</label>
+                            <select class="form-control" id="sexo" name="sexo">
+                                <option>Mujer.</option>
+                                <option>Hombre.</option>
+                                <option>Intersexual.</option>
+                                <option selected>No registra.</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="genero">Género:</label>
+                            <select class="form-control" id="genero" name="genero">
+                                <option>Maculino.</option>
+                                <option>Femenino.</option>
+                                <option>Transgenero.</option>
+                                <option selected>No registra.</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="victima_conflicto">Victima del conflicto (registrado en el RUV):</label>
+                            <select class="form-control" id="victima_conflicto" name="victima_conflicto">
+                                <option>Sí.</option>
+                                <option selected>No.</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="nivel_educativo">¿Cuál es el nivel educativo más alto alcanzado por el ciudadano(a)?:</label>
+                            <select class="form-control" id="nivel_educativo" name="nivel_educativo">
+                                <option>Preescolar.</option>
+                                <option>Básica.</option>
+                                <option>Media.</option>
+                                <option>Superior pregrado.</option>
+                                <option>Superior posgrado.</option>
+                                <option selected>No registra.</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="grupo_etnico">¿El ciudadano(a) se reconoce en alguno de estos grupos étnicos?:</label>
+                            <select class="form-control" id="grupo_etnico" name="grupo_etnico">
+                                <option>Negra, Afrocolombiana, Raizal y Palenquera (NARP).</option>
+                                <option>Gitana o Rrom.</option>
+                                <option>Indigena.</option>
+                                <option selected>No registra.</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="estrato">Estrato socioeconómico:</label>
+                            <select class="form-control" id="estrato" name="estrato">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>Zona rural - Sin Estratificar.</option>
+                                <option selected>No registra.</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="nombre_organizacion">Nombre de la fundación u organización a la que pertenece:</label>
+                            <input type="text" class="form-control" id="nombre_organizacion" name="nombre_organizacion" placeholder="Nombre Fundación:">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="contacto_organizacion">Nombre del contacto de la fundación u organización:</label>
+                            <input type="text" class="form-control" id="contacto_organizacion" name="contacto_organizacion" placeholder="Nombre contacto:">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="telefono_organizacion">Telefono del contacto de la fundación u organización:</label>
+                            <input type="number" class="form-control" name="telefono_organizacion"  id="telefono_organizacion">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="correo_organizacion">Correo Electrónico del contacto de la fundación u organización:</label>
+                            <input type="email" class="form-control" id="correo_organizacion" name="correo_organizacion"  placeholder="correo@ejemplo.com">
+                        </div>
+                    </div>
+                    <div class="row">
                         <p>
                             *Solo se permite el ingreso de mayores de edad<br>
                             *Al registrarte aceptas el tratamiento de datos registrados
                         </p>
+                        <div class="col-12 text-center mt-5">
+                            <button type="button" style="color:black;"  id="showMintic"><h3>Ver campos MinTIC</h3></button>
+                        </div>
                         <div class="col-12 text-center mt-5">
                             <button type="submit" class="btn btn-warning">Guardar</button>
                         </div>

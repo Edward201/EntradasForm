@@ -1,4 +1,5 @@
 const form = document.getElementById('form');
+
 form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -14,11 +15,16 @@ form.addEventListener('submit', e => {
 
     let res = window.api.validateUser(userValidate);
     if (res.length > 0) {
-        console.log(res[0])
         if(res[0].table == "users_upload"){
             window.api.createUser(res[0]);
         }
-        alert('El usuario ya se encuentra registrado');
+        document.getElementById('name').value = '';
+        document.getElementById('document').value = '';
+        var alert = document.getElementById('alert');
+        alert.style="display:block;";
+        setTimeout(() => {
+           alert.style="display:none;"; 
+        }, 2000);
     }else{
         window.api.registerUser(userValidate);
     }
