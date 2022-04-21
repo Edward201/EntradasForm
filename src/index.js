@@ -3,11 +3,11 @@ const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const url = require('url');
 const path = require('path');
 
-if (process.env.NODE_ENV !== 'production') {
-    require('electron-reload')(__dirname, {
-        electron: path.join(__dirname, '../node_modules', '.bin', 'electron')
-    })
-}
+// if (process.env.NODE_ENV !== 'production') {
+//     require('electron-reload')(__dirname, {
+//         electron: path.join(__dirname, '../node_modules', '.bin', 'electron')
+//     })
+// }
 
 
 let mainWindow;

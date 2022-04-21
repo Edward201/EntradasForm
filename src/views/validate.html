@@ -159,6 +159,206 @@
                             <input type="email" class="form-control" id="correo_organizacion" name="correo_organizacion"  placeholder="correo@ejemplo.com">
                         </div>
                     </div>
+                    <div id="swimFields" class="row py-3" style="visibility: hidden; height: 0px;">
+                        <div class="col-12 pt-3">
+                            <h2 class="title">Campos adicionales SWIM</h2>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="fecha_nacimiento_swim">FECHA DE NACIMIENTO:</label>
+                            <input type="date" class="form-control" id="fecha_nacimiento_swim" name="fecha_nacimiento_swim" >
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="nivel_educativo_swim">¿CUÁL ES EL NIVEL EDUCATIVO MÁS ALTO ALCANZADO POR EL CIUDADANO(A)?:</label>
+                            <select class="form-control" id="nivel_educativo_swim" name="nivel_educativo_swim" >
+                                <option>PRIMARIA</option>
+                                <option>SECUNDARIA</option>
+                                <option>TÉCNICA/TECNOLÓGICA</option>
+                                <option>UNIVERSITARIA</option>
+                                <option>ESPECIALIZACIÓN</option>
+                                <option>MAESTRÍA</option>
+                                <option>DOCTORADO</option>
+                                <option>NINGUNO</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="grupo_etnico_swim">¿EL CIUDADANO(A) SE AUTORECONOCE EN ALGUNO DE ESTOS GRUPOS ÉTNICOS?:</label>
+                            <select class="form-control" id="grupo_etnico_swim" name="grupo_etnico_swim" >
+                                <option>INDÍGENA</option>
+                                <option>GITANO - RROM</option>
+                                <option>RAIZAL</option>
+                                <option>PALENQUERA DE SAN BASILIO</option>
+                                <option>NEGRO - AFROCOLOMBIANO</option>
+                                <option>NINGUNO DE LOS ANTERIORES</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="orientacion_sexual_swim">ORIENTACIÓN SEXUAL DEL CIUDADANO(A):</label>
+                            <select class="form-control" id="orientacion_sexual_swim" name="orientacion_sexual_swim" >
+                                <option>Lesbiana</option>
+                                <option>Gay</option>
+                                <option>Bisexual</option>
+                                <option>Heterosexual</option>
+                                <option selected>No informa</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="genero_swim">IDENTIDAD DE GÉNERO DEL CIUDADANO(A):</label>
+                            <select class="form-control" id="genero_swim" name="genero_swim" >
+                                <option>Femenino</option>
+                                <option>Masculino</option>
+                                <option>Transgenerista</option>
+                                <option selected>No informa</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="actividades_swim">¿EL CIUDADANO(A) REALIZA ALGUNA DE ESTAS ACTIVIDADES?:</label>
+                            <select class="form-control" id="actividades_swim" name="actividades_swim" >
+                                <option>CUIDADO DE NIÑOS Y NIÑAS</option>
+                                <option>CUIDADO DE PERSONAS CON DISCAPACIDAD</option>
+                                <option>CUIDADO DE PERSONAS MAYORES</option>
+                                <option>PERSONA EN EJERCICIO DE PROSTITUCIÓN</option>
+                                <option>RECICLADOR/COROTERO</option>
+                                <option>VENDEDORES AMBULANTES/ESTACIONARIOS</option>
+                                <option>ARTISTAS</option>
+                                <option>MIEMBRO DE CULTURAS URBANAS</option>
+                                <option>HABITANTE DE CALLE</option>
+                                <option>CABEZA DE FAMILIA</option>
+                                <option>DESMOVILIZADO(A)</option>
+                                <option>REINSERTADO(A)</option>
+                                <option>VÍCTIMA DEL CONFLICTO ARMADO*</option>
+                                <option>NINGUNO DE LOS ANTERIORES</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="cargo_emprendimiento_swim">¿QUE CARGO OCUPA EL CIUDADANO(A) DENTRO DE LA IDEA DE EMPRENDIMIENTO (IE) O LA UNIDAD PRODUCTIVA (UP)?:</label>
+                            <select class="form-control" id="cargo_emprendimiento_swim" name="cargo_emprendimiento_swim" >
+                                <option>PROPIETARIO(A) Y/O SOCIO(A)</option>
+                                <option>ADMINISTRADOR(A)</option>
+                                <option>EMPLEADO(A)</option>
+                                <option>FAMILIAR</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_departamento_swim">DEPARTAMENTO DEL EMPRENDIMIENTO:</label>
+                            <input type="text" class="form-control" id="emprendimiento_departamento_swim" name="emprendimiento_departamento_swim">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_municipio_swim">MUNICIPIO DEL EMPRENDIMIENTO:</label>
+                            <input type="text" class="form-control" id="emprendimiento_municipio_swim" name="emprendimiento_municipio_swim">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_direccion_swim">DIRECCIÓN DE DOMICILIO DEL EMPRENDIMIENTO:</label>
+                            <input type="text" class="form-control" id="emprendimiento_direccion_swim" name="emprendimiento_direccion_swim" >
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_localidad_urbana_swim">LOCALIDAD DEL EMPRENDIMIENTO:</label>
+                            <input type="text" class="form-control" id="emprendimiento_localidad_urbana_swim" name="emprendimiento_localidad_urbana_swim" >
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_barrio_swim">BARRIO DEL EMPRENDIMIENTO:</label>
+                            <input type="text" class="form-control" id="emprendimiento_barrio_swim" name="emprendimiento_barrio_swim" >
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_telefono_swim">TELÉFONO DEL EMPRENDIMIENTO:</label>
+                            <input type="number" class="form-control" name="emprendimiento_telefono_swim"  id="emprendimiento_telefono_swim">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_email">EMAIL DEL EMPRENDIMIENTO:</label>
+                            <input type="email" class="form-control" id="emprendimiento_email" name="emprendimiento_email"  placeholder="correo@ejemplo.com">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_camara_comercio_swim">¿EL EMPRENDIMIENTO O UNIDAD PRODUCTIVA TIENE CÁMARA DE COMERCIO?:</label>
+                            <select class="form-control" id="emprendimiento_camara_comercio_swim" name="emprendimiento_camara_comercio_swim" >
+                                <option>SI</option>
+                                <option>NO</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_nit_swim">NÚMERO DE NIT:</label>
+                            <input type="text" class="form-control" name="emprendimiento_nit_swim"  id="emprendimiento_nit_swim">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_nombre_swim">NOMBRE DE LA IDEA DE EMPRENDIMIENTO O UNIDAD PRODUCTIVA:</label>
+                            <input type="text" class="form-control" name="emprendimiento_nombre_swim"  id="emprendimiento_nombre_swim">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_operacion_swim">¿SU EMPRENDIMIENTO O UNIDAD PRODUCTIVA SE ENCUENTRA EN OPERACIÓN?:</label>
+                            <select class="form-control" id="emprendimiento_operacion_swim" name="emprendimiento_operacion_swim" >
+                                <option>SI</option>
+                                <option>NO</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="fecha_inicio_operaciones_swim">FECHA DE INICIO DE OPERACIONES DE LA IDEA DE EMPRENDIMIENTO O UNIDAD PRODUCTIVA:</label>
+                            <input type="date" class="form-control" id="fecha_inicio_operaciones_swim" name="fecha_inicio_operaciones_swim" >
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_tipo_organizacion_swim">TIPO DE EMPRESA:</label>
+                            <select class="form-control" id="emprendimiento_tipo_organizacion_swim" name="emprendimiento_tipo_organizacion_swim" >
+                                <option>SOCIEDAD ANONIMA</option>
+                                <option>SOCIEDAD EN COMANDITA POR ACCIONES SIMPLIFICADA</option>
+                                <option>SOCIEDAD EN COMANDITA SIMPLE</option>
+                                <option>SOCIEDAD DE HECHO</option>
+                                <option>ECONOMÍA SOLIDARIA (COOPERATIVA)</option>
+                                <option>MIXTA</option>
+                                <option>ESTATAL</option>
+                                <option>SOCIEDAD LTDA</option>
+                                <option>PERSONA NATURAL</option>
+                                <option>SOCIEDAD POR ACCIONES SIMPLIFICADA (SAS)</option>
+                                <option>SIN ANIMO DE LUCRO</option>
+                                <option>SOCIEDAD COLECTIVA</option>
+                                <option>SUCURSAL DE SOCIEDAD EXTRANJERA</option>
+                                <option>UNIPERSONAL</option>
+                                <option>OTRO</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_tipo_organizacion_otro_swim">OTRO ¿CUÁL?:</label>
+                            <input type="text" class="form-control" id="emprendimiento_tipo_organizacion_otro_swim" name="emprendimiento_tipo_organizacion_otro_swim">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_lugar_desarrollo_swim">¿PRINCIPALMENTE EN QUE LUGAR DESARROLLA SU ACTIVIDAD PRODUCTIVA?:</label>
+                            <select class="form-control" id="emprendimiento_lugar_desarrollo_swim" name="emprendimiento_lugar_desarrollo_swim" >
+                                <option>CALLE (AMBULANTE -ESTACIONARIA)</option>
+                                <option>CAMPO TERRENO PROPIO</option>
+                                <option>CAMPO TERRENO ARRENDADO</option>
+                                <option>KIOSKO O CASETA</option>
+                                <option>LOCAL U OFICINA PROPIA)</option>
+                                <option>LOCAL U OFICINA EN ARRIENDO</option>
+                                <option>MAQUILA</option>
+                                <option>PUERTA A PUERTA</option>
+                                <option>SATÉLITE</option>
+                                <option>VEHICULO ARRENDADO O PRESTADO)</option>
+                                <option>VEHICULO PROPIO</option>
+                                <option>VIVIENDA DIFERENTE A LA SUYA</option>
+                                <option>VIVIENDA QUE HABITA</option>
+                                <option>EMPRENDIMIENTO NO HA INICIADO ACTIVIDADES</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_medio_comercializacion_swim">¿PRINCIPALMENTE QUE MEDIO UTILIZA PARA COMERCIALIZAR SUS PRODUCTOS Y/O PRESTAR SUS SERVICIOS?:</label>
+                            <select class="form-control" id="emprendimiento_medio_comercializacion_swim" name="emprendimiento_medio_comercializacion_swim" >
+                                <option>CALLE (AMBULANTE-ESTACIONARIA)</option>
+                                <option>FERIAS Y EVENTOS</option>
+                                <option>INTERNET</option>
+                                <option>KIOSKO O CASETA</option>
+                                <option>MADRUGÓN</option>
+                                <option>PUERTA A PUERTA</option>
+                                <option>PUNTO DE VETA: LOCAL, ALMACÉN, TALLER O FABRICA</option>
+                                <option>VEHICULO ARRENDADO O PRESTADO</option>
+                                <option>VEHICULO PROPIO</option>
+                                <option>EMPRENDIMIENTO_NO HA INICIADO COMERCILIZACIÓN/PRESTACIÓN SERVICIO</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_numero_trabajadores_swim">¿CUANTAS PERSONAS INCLUIDO EL PROPIETARIO(A) Y SOCIOS, TRABAJAN EN LA IDEA DE EMPRENDIMIENTO O UNIDAD PRODUCTIVA?:</label>
+                            <input type="number" class="form-control" id="emprendimiento_numero_trabajadores_swim" name="emprendimiento_numero_trabajadores_swim">
+                        </div>
+                        <div class="form-group col-sm-12 col-md-6 pt-3">
+                            <label for="emprendimiento_actividad_swim">ACTIVIDAD DE SU IDEA, EMPRENDIMIENTO O UNIDAD PRODUCTIVA:</label>
+                            <input type="text" class="form-control" id="emprendimiento_actividad_swim" name="emprendimiento_actividad_swim">
+                        </div>
+                    </div>
                     <div class="row">
                         <p>
                             *Solo se permite el ingreso de mayores de edad<br>
@@ -166,6 +366,15 @@
                         </p>
                         <div class="col-12 text-center mt-5">
                             <button type="button" style="color:black;"  id="showMintic"><h3>Ver campos MinTIC</h3></button>
+                        </div>
+                        <div class="col-12 text-center mt-5">
+                            <button type="button" style="color:black; display:none;"  id="hideMintic"><h3>Ocultar campos MinTIC</h3></button>
+                        </div>
+                        <div class="col-12 text-center mt-5">
+                            <button type="button" style="color:black;"  id="showSwim"><h3>Ver campos SWIM</h3></button>
+                        </div>
+                        <div class="col-12 text-center mt-5">
+                            <button type="button" style="color:black; display:none;"  id="hideSwim"><h3>Ocultar campos SWIM</h3></button>
                         </div>
                         <div class="col-12 text-center mt-5">
                             <button type="submit" class="btn btn-warning">Guardar</button>
